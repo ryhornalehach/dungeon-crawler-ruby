@@ -9,5 +9,17 @@ class Player
     @attack = 25
   end
 
+  def get_vial
+    @health += 25
+  end
+
+  def attack_monster
+    @health -= 25
+  end
+
+  def display_stats
+    puts "Health: #{@health}, Level: #{@level}, Attack: #{@attack}, Weapon: #{@weapon}"
+  end
+
 
 end
