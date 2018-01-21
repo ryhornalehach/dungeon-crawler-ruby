@@ -1,3 +1,5 @@
+require_relative "monster"
+
 class Player
   attr_reader :health, :level, :weapon, :attack
 
@@ -10,7 +12,7 @@ class Player
   end
 
   def get_vial
-    @health += 25
+    @health += ( 20 * (1 + (@level * 0.3)) )
   end
 
   def get_weapon
@@ -18,8 +20,13 @@ class Player
     @attack = 40
   end
 
-  def attack_monster
-    @health -= 25
+  def attack_monster(monster)
+      attack_result = monster.hit_by_player(@attack)
+      if attack_result != 'killed'
+          @health -= attack_result
+      else
+          return 'killed'
+      end
   end
 
   def display_stats

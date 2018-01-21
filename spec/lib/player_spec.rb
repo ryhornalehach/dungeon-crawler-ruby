@@ -21,5 +21,11 @@ RSpec.describe Player do
     end
   end
 
+  describe "#get_vial" do
+    it "adds health points according to the current level" do
+      new_player.get_vial
+      expect(new_player.health).to eq(126)
+    end
+  end
 
 end
