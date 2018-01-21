@@ -28,6 +28,16 @@ class Map
           ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#']
         ]
 
+  WEAPONS = [
+      { 'Knife': 40 },
+      { 'Bat': 55 },
+      { 'Axe': 70 },
+      { 'Sword': 80 },
+      { 'Katana': 90 },
+      { 'Chainsaw': 130 },
+      { 'Thor\'s hammer': 200 },
+  ]
+
   def initialize
     @level = LEVEL_1
     @monster_1 = Monster.new  # creating new instance of Monster

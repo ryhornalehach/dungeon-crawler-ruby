@@ -3,7 +3,12 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b5dedb69dbb18c783d59/test_coverage)](https://codeclimate.com/github/ryhornalehach/dungeon-crawler-ruby/test_coverage)
 
 ## Dungeon Crawler game. Made by Ryhor Nalehach.\n
-This is console game, built in Ruby.\n
+##### This is turn-based role-playing game. Player can move by using arrow keys on the keyboard. You can pickup vials with health potion and you can pickup weapons. Player can fight with monsters. If the monster wasn't killed from the first hit, it will counterattack the player. \n
+
+Dungeon Crawler is console game, built in Ruby.\n
+
 To start:
   1. bundle
   2. ruby game.rb
+To test:
+  1. rspec

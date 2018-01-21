@@ -16,8 +16,14 @@ class Player
   end
 
   def get_weapon
-    @weapon = 'Knife'
-    @attack = 40
+    @weapon = Map::WEAPONS[@level - 1].keys[0]
+    @attack = Map::WEAPONS[@level - 1].values[0]
+  end
+
+  def level_up
+    @level += 1
+    @health += ( 33 * (1 + (@level * 0.3)) )
+    @attack += ( @attack * 0.1 )
   end
 
   def attack_monster(monster)
@@ -25,6 +31,11 @@ class Player
       if attack_result != 'killed'
           @health -= attack_result
       else
+          @xp += monster.attack
+          if ( @xp >= (@level * 100) )
+              level_up
+              @xp = 0
+          end
           return 'killed'
       end
   end
