@@ -29,6 +29,8 @@ while user_input.downcase != 'x'  # the loop will be used to stop the game when 
   case action
   when "get_vial"
     new_player.get_vial
+  when "get_weapon"
+    new_player.get_weapon
   when "attack_monster"
     new_player.attack_monster
   when "exit"

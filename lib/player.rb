@@ -13,6 +13,11 @@ class Player
     @health += 25
   end
 
+  def get_weapon
+    @weapon = 'Knife'
+    @attack = 40
+  end
+
   def attack_monster
     @health -= 25
   end
