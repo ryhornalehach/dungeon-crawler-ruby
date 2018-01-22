@@ -3,6 +3,7 @@ require_relative "monster"
 require_relative "player"
 
 class Map
+  attr_reader :player
 
   LEVEL_1 = [
           ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
@@ -35,7 +36,7 @@ class Map
       { 'Sword' => 80 },
       { 'Katana' => 90 },
       { 'Chainsaw' => 130 },
-      { 'Thor\'s hammer' => 200 },
+      { 'Thor\'s hammer' => 200 }
   ]
 
   def initialize

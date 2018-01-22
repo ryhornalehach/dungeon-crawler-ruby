@@ -51,7 +51,6 @@ RSpec.describe Player do
     it "gets a weapon in accordance to the players level" do
       new_player.get_weapon
       expect(new_player.weapon).to eq('Knife')
-      expect(new_player.attack).to eq(40)
     end
     it "increases the attack power according to the newly aquired weapon" do
       new_player.get_weapon
@@ -87,10 +86,9 @@ RSpec.describe Player do
     end
   end
 
-  describe ".get_vial" do
-    it "adds health points according to the current level" do
-      new_player.get_vial
-      expect(new_player.health).to eq(126)
+  describe ".display_stats" do
+    it "displays current players stats" do
+      expect { new_player.display_stats }.to output("Health: 100, Level: 1, Attack: 25, Weapon: \n").to_stdout
     end
   end
 
