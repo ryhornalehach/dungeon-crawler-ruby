@@ -22,12 +22,21 @@ RSpec.describe Map do
 
   describe ".move_right , .move_left , move_up , move_down" do
     it "moves a player along the map" do
-      new_map.move_right
-      11.times {new_map.move_down}
+      2.times {new_map.move_right}
+      5.times {new_map.move_up}
+      expect(new_map.player.health).to eq(75)
       new_map.move_left
-      new_map.move_up
+      14.times {new_map.move_down}
+      new_map.move_left
       expect(new_map.player.weapon).to eq('Knife')
-      expect(new_map.player.attack).to eq(40)
+      new_map.move_right
+      10.times {new_map.move_up}
+      5.times {new_map.move_right}
+      new_map.move_down
+      expect(new_map.player.health).to eq(101)
+      8.times {new_map.move_down}
+      4.times {new_map.move_right}
+      expect(new_map.player.health).to eq(127)
     end
   end
 
