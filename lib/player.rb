@@ -44,5 +44,4 @@ class Player
     puts "Health: #{@health}, Level: #{@level}, Attack: #{@attack}, Weapon: #{@weapon}"
   end
 
-
 end
